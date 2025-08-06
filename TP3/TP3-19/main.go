@@ -25,12 +25,13 @@ import (
 func main() {
 
 	var (
-		nom   string
-		n     int
-		cantA int
-		cantB int
-		cantC int
-		cantD int
+		nom     string
+		n       int
+		cantA   int
+		cantB   int
+		cantC   int
+		cantD   int
+		cantDin int
 	)
 
 	fmt.Print("ingrese la cantidad de viajes vendidos: ")
@@ -41,16 +42,20 @@ func main() {
 		fmt.Scanln(&nom)
 
 		if n < 10 {
-			fmt.Println("El importe a pagarle a", nom, "es de $1000")
+			cantDin = n * 1000
+			fmt.Println("El importe a pagarle a", nom, "es de", cantDin)
 			cantA += 1
 		} else if n >= 10 && n < 50 {
-			fmt.Println("El importe a pagarle a", nom, "es de $1500")
+			cantDin = n * 1500
+			fmt.Println("El importe a pagarle a", nom, "es de", cantDin)
 			cantB += 1
 		} else if n >= 50 && n < 100 {
-			fmt.Println("El importe a pagarle a", nom, "es de $1700")
+			cantDin = n * 1700
+			fmt.Println("El importe a pagarle a", nom, "es de", cantDin)
 			cantC += 1
 		} else if n >= 100 {
-			fmt.Println("El importe a pagarle a", nom, "es de $1900")
+			cantDin = n * 1900
+			fmt.Println("El importe a pagarle a", nom, "es de", cantDin)
 			cantD += 1
 		}
 		fmt.Print("ingrese la cantidad de viajes vendidos: ")
